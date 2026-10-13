@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Rehearse · Golden Hour — design tokens (see docs/DESIGN.md)
+   One day, four lights. Every page and landing section sets data-sky to a time
+   of day; the same token names change value so components never hard-code colour.
+     dawn  → set up (pick a role)
+     noon  → the interview (answer out loud)
+     gold  → the follow-up
+     night → the debrief
+   ========================================================================== */
+
+:root,
+[data-sky="dawn"] {
+  --sky-top: #fcd9c4;
+  --sky-bottom: #f9b9a8;
+  --ink: #2b1626;
+  --ink-2: #4a2a3a;
+  --ink-3: #5a3345;
+  --on-ink: #fce9de;
+  --accent: #8a1f45; /* italic emphasis in headings */
+  --live: #d23f5c; /* the mic is on */
+  --live-text: #80193d;
+  --live-wash: rgba(210, 63, 92, 0.12);
+  --cue: #7a2447;
+  --good: #155232;
+  --warn: #6e3505;
+  --surface: rgba(255, 250, 244, 0.66);
+  --surface-solid: #fff8f2;
+  --field: rgba(255, 252, 248, 0.85);
+  --rule: rgba(43, 22, 38, 0.13);
+  --rule-strong: rgba(43, 22, 38, 0.3);
+  --chip-bg: rgba(255, 255, 255, 0.55);
+  --panel-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset, 0 30px 60px -30px rgba(120, 50, 40, 0.35);
+  --focus: #7a2447;
+  --d1: #c2417a; --d2: #e0784a; --d3: #a3284f; --d4: #6b3fa0; --d5: #1d5f8a;
+  color-scheme: light;
+}
+
+[data-sky="noon"] {
+  --sky-top: #9fd3ef;
+  --sky-bottom: #e4f3fa;
+  --ink: #13243a;
+  --ink-2: #2e4258;
+  --ink-3: #3a4d62;
+  --on-ink: #eef8fd;
+  --accent: #154c72;
+  --live: #d23f5c;
+  --live-text: #931f3c;
+  --live-wash: rgba(210, 63, 92, 0.1);
+  --cue: #154c72;
+  --good: #175536;
+  --warn: #6e3505;
+  --surface: rgba(255, 255, 255, 0.62);
+  --surface-solid: #f6fbfe;
+  --field: rgba(255, 255, 255, 0.86);
+  --rule: rgba(19, 36, 58, 0.12);
+  --rule-strong: rgba(19, 36, 58, 0.28);
+  --chip-bg: rgba(255, 255, 255, 0.65);
+  --panel-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 30px 60px -30px rgba(29, 78, 115, 0.35);
+  --focus: #154c72;
+  --d1: #1d5f8a; --d2: #2f8f9d; --d3: #6b3fa0; --d4: #c2417a; --d5: #e0784a;
+  color-scheme: light;
+}
+
+[data-sky="gold"] {
+  --sky-top: #f6a35b;
+  --sky-bottom: #e46c7b;
+  --ink: #1c0816;
+  --ink-2: #2a0d22;
+  --ink-3: #3a1230;
+  --on-ink: #fff3ea;
+  --accent: #4f0f2c;
+  --live: #b8233f;
+  --live-text: #4f0f2c;
+  --live-wash: rgba(122, 30, 69, 0.12);
+  --cue: #4f0f2c;
+  --good: #123d27;
+  --warn: #4a2003;
+  --surface: rgba(255, 245, 235, 0.68);
+  --surface-solid: #fff3ea;
+  --field: rgba(255, 250, 245, 0.88);
+  --rule: rgba(42, 15, 36, 0.14);
+  --rule-strong: rgba(42, 15, 36, 0.32);
+  --chip-bg: rgba(255, 245, 235, 0.6);
+  --panel-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 30px 60px -30px rgba(80, 20, 50, 0.45);
+  --focus: #4f0f2c;
+  --d1: #7a1e45; --d2: #b8233f; --d3: #c2417a; --d4: #6b3fa0; --d5: #1d5f8a;
+  color-scheme: light;
+}
+
+[data-sky="night"] {
+  --sky-top: #3b2470;
+  --sky-bottom: #120f33;
+  --ink: #f5eeff;
+  --ink-2: #dcd2f0;
+  --ink-3: #b9aed6;
+  --on-ink: #1e1b4b;
+  --accent: #ffc9a8;
+  --live: #ff7a8a;
+  --live-text: #ffa3ae;
+  --live-wash: rgba(255, 122, 138, 0.14);
+  --cue: #c9b6ff;
+  --good: #8fe3b0;
+  --warn: #ffc27a;
+  --surface: rgba(20, 17, 58, 0.58);
+  --surface-solid: #1d1950;
+  --field: rgba(30, 27, 75, 0.7);
+  --rule: rgba(245, 238, 255, 0.14);
+  --rule-strong: rgba(245, 238, 255, 0.3);
+  --chip-bg: rgba(245, 238, 255, 0.12);
+  --panel-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset, 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+  --focus: #ffc9a8;
+  --d1: #ffc9a8; --d2: #f6a35b; --d3: #f08ba8; --d4: #bfa6ff; --d5: #9fd3ef;
+  color-scheme: dark;
+}
+
+/* Text inside a time-of-day scope always uses that scope's ink. */
+[data-sky] { color: var(--ink); }
+
+:root {
+  /* Type */
+  --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --font-ui: "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --fs-display: clamp(52px, 8vw, 112px);
+  --fs-h1: clamp(42px, 5.6vw, 76px);
+  --fs-h2: clamp(38px, 4.8vw, 68px);
+  --fs-h3: clamp(24px, 2.2vw, 30px);
+  --fs-question: clamp(26px, 2.7vw, 38px);
+  --fs-lede: clamp(17px, 1.5vw, 19px);
+  --fs-body: 17px;
+  --fs-small: 14px;
+  --fs-label: 12px;
+  --lh-head: 1;
+  --lh-body: 1.6;
+
+  /* Space (4-based) */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px;
+  --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px;
+
+  /* Layout */
+  --max: 1200px;
+  --narrow: 760px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --header-h: 76px;
+
+  /* Shape: soft, sunlit panels */
+  --radius-lg: 24px;
+  --radius: 16px;
+  --radius-sm: 10px;
+
+  /* Motion (mirrors src/motion.js) */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 0.18s;
+  --dur-base: 0.32s;
+  --dur-slow: 0.6s;
+}
