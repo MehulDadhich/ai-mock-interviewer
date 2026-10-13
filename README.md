@@ -2,6 +2,8 @@
 
 **Practise interviews out loud.** Pick a role, and an AI interviewer asks questions in a real voice, listens to your spoken answers, follows up when you're vague, and writes you a debrief you can act on.
 
+**Live demo:** [ai-mock-interviewer-mauve-two.vercel.app](https://ai-mock-interviewer-mauve-two.vercel.app/)
+
 ![Rehearse landing page](docs/screenshots/landing.png)
 
 ## Features
